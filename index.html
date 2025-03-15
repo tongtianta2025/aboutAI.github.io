@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI导航 - 探索前沿AI工具集合</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/lucide-icon-font/dist/lucide-icon-font.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="logo.svg" alt="AI Navigator Logo" class="h-10 w-10">
+                <h1 class="text-xl font-semibold tracking-tight font-geist-mono">AI Navigator</h1>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <img src="search-icon.svg" alt="Search" class="h-5 w-5 text-gray-400">
+                </div>
+                <input type="text" id="search-input" placeholder="搜索AI工具..." class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent w-full md:w-72">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="mb-16 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">发现并探索顶尖AI工具</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">精选全球领先的人工智能工具，帮助您提升效率与创造力，无论是对话助手、图像生成还是视频创作。</p>
+        </section>
+
+        <!-- Categories -->
+        <section class="mb-10">
+            <div id="category-tabs" class="flex flex-wrap gap-2 mb-12">
+                <button class="category-btn active py-2 px-4 rounded-lg" data-category="all">全部工具</button>
+                <button class="category-btn py-2 px-4 rounded-lg" data-category="conversation">AI对话</button>
+                <button class="category-btn py-2 px-4 rounded-lg" data-category="image">AI生图</button>
+                <button class="category-btn py-2 px-4 rounded-lg" data-category="video">AI生视频</button>
+                <button class="category-btn py-2 px-4 rounded-lg" data-category="audio">AI音频</button>
+                <button class="category-btn py-2 px-4 rounded-lg" data-category="writing">AI写作</button>
+                <button class="category-btn py-2 px-4 rounded-lg" data-category="code">AI编程</button>
+                <button class="category-btn py-2 px-4 rounded-lg" data-category="education">AI教育</button>
+                <button class="category-btn py-2 px-4 rounded-lg" data-category="productivity">AI效率工具</button>
+            </div>
+
+            <!-- Tools Grid -->
+            <div id="tools-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tools will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-100 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 mb-4">Built with <a href="https://flowith.net" target="_blank" class="text-black hover:underline">Flowith Oracle</a>.</p>
+            <p class="text-gray-500 text-sm">&copy; 2023 AI Navigator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener("wheel", (e)=> {
+          const isPinching = e.ctrlKey
+          if(isPinching) e.preventDefault()
+        }, { passive: false })
+    </script>
+</body>
+</html>
